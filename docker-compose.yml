@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  ## PostgresSQL Docker Compose Config
+  postgres-user:
+    image: postgres
+    container_name: postgres-user
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    environment:
+      - POSTGRES_DB=user_service
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root1234
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  postgres-data:
