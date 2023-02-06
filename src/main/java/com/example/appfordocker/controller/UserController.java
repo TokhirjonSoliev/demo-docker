@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private UserService userService ;
 
-    @GetMapping("getAll")
+    @GetMapping("/getAll")
     public ResponseEntity<?> getAll(){
         return ResponseEntity.ok(userService.getAll());
     }
