@@ -14,5 +14,5 @@ WORKDIR /app
 
 COPY --from=MAVEN_BUILD /build/target/*.jar /app/appForDocker.jar
 
-EXPOSE 8080
+EXPOSE 8090
 ENTRYPOINT ["java", "-jar", "/app/appForDocker.jar"]
